@@ -49,3 +49,8 @@ Feel free to contribute to this project by forking the repository and submitting
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## My Contribution
+
+- Added a dark mode toggle using a custom switch button
+- Used localStorage to save the theme preference so it stays after refresh
