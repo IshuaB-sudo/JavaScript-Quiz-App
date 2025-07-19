@@ -210,3 +210,20 @@ beginBtn.addEventListener('click', startquiz);
 restartBtn.addEventListener('click', resetQuiz);
 displayCategory();
 
+const toggleDarkModeCheckbox = document.getElementById('toggle-dark-mode');
+
+// Apply theme on toggle
+toggleDarkModeCheckbox.addEventListener('change', () => {
+  document.body.classList.toggle('dark');
+  const isDark = document.body.classList.contains('dark');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
+// Load saved theme on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark');
+    toggleDarkModeCheckbox.checked = true; // Sync switch position
+  }
+});
